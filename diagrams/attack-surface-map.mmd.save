@@ -1,0 +1,17 @@
+
+
+%% Attack surface map: Eselsa Technologies lab. Solid lines = observed. Dotted lines = hypotheses (not verified).
+flowchart TB
+  subgraph LAB["Authorized lab: 192.168.56.0/24 (VirtualBox host-only, vboxnet0)"]
+    K["Kali assessment workstation<br/>192.168.56.1"]
+    T1["Cybersecurity LabVM (Ubuntu-based)<br/>192.168.56.102"]
+    T2["Metasploitable 2<br/>192.168.56.101"]
+  end
+  K -->|"host discovery and TCP scan"| T1
+  K -->|"host discovery and TCP scan"| T2
+  T1 --- S1["Observed: 21 ftp, 22 ssh, 23 telnet"]
+  T2 --- S2["Observed: 18 open TCP ports"]
+  S1 -.->|"HYPOTHESIS: cleartext logins capturable on the segment"| I1["Credential exposure"]
+  S2 -.->|"HYPOTHESIS: outdated services raise compromise risk (not tested)"| I2["Host compromise"]
+  C1["Known control: X11 answers access denied"] --- T2
+  X["Out of scope: wlan0 network"]

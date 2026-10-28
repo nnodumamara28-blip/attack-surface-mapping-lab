@@ -1,0 +1,11 @@
+# Nmap 7.99 scan initiated Fri Oct 23 18:34:27 2026 as: /usr/lib/nmap/nmap -sn -e vboxnet0 -oN /home/kali/attack-surface-mapping-lab/evidence/nmap/2026-10-23_host-discovery.txt 192.168.56.0/24
+Nmap scan report for 192.168.56.100
+Host is up (0.00013s latency).
+MAC Address: 08:00:27:28:0C:8D (Oracle VirtualBox virtual NIC)
+Nmap scan report for 192.168.56.101
+Host is up (0.00050s latency).
+MAC Address: 08:00:27:2A:E5:4D (Oracle VirtualBox virtual NIC)
+Nmap scan report for 192.168.56.102
+Host is up (0.00065s latency).
+MAC Address: 08:00:27:55:44:07 (Oracle VirtualBox virtual NIC)
+# Nmap done at Fri Oct 23 18:34:35 2026 -- 256 IP addresses (3 hosts up) scanned in 8.44 seconds
